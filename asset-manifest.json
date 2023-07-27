@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-calculator/static/css/main.8e76f45a.css",
+    "main.js": "/react-calculator/static/js/main.2f585ace.js",
+    "static/js/787.53621415.chunk.js": "/react-calculator/static/js/787.53621415.chunk.js",
+    "static/media/GothamRounded-Medium.otf": "/react-calculator/static/media/GothamRounded-Medium.10d88929ec344e9ef796.otf",
+    "index.html": "/react-calculator/index.html",
+    "main.8e76f45a.css.map": "/react-calculator/static/css/main.8e76f45a.css.map",
+    "main.2f585ace.js.map": "/react-calculator/static/js/main.2f585ace.js.map",
+    "787.53621415.chunk.js.map": "/react-calculator/static/js/787.53621415.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e76f45a.css",
+    "static/js/main.2f585ace.js"
+  ]
+}
