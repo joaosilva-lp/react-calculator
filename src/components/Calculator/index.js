@@ -38,11 +38,44 @@ export default function Calculator(){
        setOperation(el.target.getAttribute('data'))
     }
 
+    const equals = () =>{
+        let value = compute();
+        if(value==undefined || value == null) return;
+
+        setCurrent(value)
+        setPrevious('')
+        setOperation('')
+    }
+
     const compute = () => {
+        let result
+        let previousNumber = parseFloat(previous)
+        let currentNumber = parseFloat(current)
+        
+        if(isNaN(previousNumber) || isNaN(currentNumber)) return
 
+        switch(operation){
+            case '÷':
+                result = previousNumber/currentNumber;
+                break;
+            case '+':
+                result = previousNumber+currentNumber;
+                break;
+            case '×':
+                result = previousNumber * currentNumber;
+                break;
+            case '-':
+                result = previousNumber - currentNumber;
+                break;
+            default:
+                return
+        }
 
+        return result;
 
     }
+
+    
 
     return(
         <Container> 
@@ -68,7 +101,7 @@ export default function Calculator(){
             <Button onClick={chooseOperation} data={'-'} operation>-</Button>
             <Button data={'.'} onClick={appendValue} period>.</Button>
             <Button data={'0'} onClick={appendValue}>0</Button>
-            <Button equals>=</Button>
+            <Button onClick={equals} equals>=</Button>
         </Container>
 
     )
