@@ -51,8 +51,29 @@ ${function ({gridSpan}){
     }
 }}
 
-${({operation}) => operation && `background-color: gray`}
-${({control}) => control && `background-color: skyblue`}
-${({equals}) => equals && `border-bottom-right-radius:10px; background-color: gray`}
-${({period}) => period && `border-bottom-left-radius:10px; background-color: skyblue`}
+${function ({operation}){
+    if(operation){
+        return `background-color: gray`
+    }
+}}
+
+${function ({equals}){
+    if(equals){
+        return `border-bottom-right-radius:10px; background-color: gray;grid-column: span 2`
+    }
+}}
+
+${function ({control}){
+    if(control){
+        return `background-color: skyblue`
+    }
+}}
+
+${function ({period}){
+    if(period){
+        return `border-bottom-left-radius:10px; background-color: skyblue`
+    }
+}}
 `
+
+//${({period}) => period && `border-bottom-left-radius:10px; background-color: skyblue`}
